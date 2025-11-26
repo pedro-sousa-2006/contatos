@@ -1,0 +1,7 @@
+{
+  "name": "projeto_crud",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
