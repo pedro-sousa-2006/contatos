@@ -1,0 +1,31 @@
+.container {
+  padding: 16px;
+}
+
+.contato-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.contato-item {
+  background: #fff;
+  border-radius: 10px;
+  --background: #ffffff;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contato-item ion-label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.contato-item p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.caixa{
+    font: size 40px;
+}

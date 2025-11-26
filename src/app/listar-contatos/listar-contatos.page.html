@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>adicionar-contatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="container">
+    <ion-list class="row">
+          <ion-item class="col">
+     <div class="item">
+       <ion-label class="caixa">Ordem</ion-label>
+      <p slot="end">1°</p>
+     </div>
+    </ion-item>
+    <ion-item class="col">
+     <div class="item">
+       <ion-label class="caixa">Nome :</ion-label>
+      <p slot="end">Pedro</p>
+     </div>
+    </ion-item>
+        <ion-item class="col">
+     <div class="item">
+       <ion-label class="caixa">Sobrenome</ion-label>
+      <p slot="end">Sousa</p>
+     </div>
+    </ion-item>
+        <ion-item class="col">
+     <div class="item">
+       <ion-label class="caixa">Email</ion-label>
+      <p slot="end">Pedro@gmail.com</p>
+     </div>
+    </ion-item>
+  </ion-list>
+  <ion-button routerLink="/home"
+  expand="">Voltar</ion-button>
+</ion-content>

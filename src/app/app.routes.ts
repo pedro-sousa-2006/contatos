@@ -10,4 +10,12 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'listar-contatos',
+    loadComponent: () => import('./listar-contatos/listar-contatos.page').then( m => m.ListarContatosPage)
+  },
+  {
+    path: 'adicionar-contatos',
+    loadComponent: () => import('./adicionar-contatos/adicionar-contatos.page').then( m => m.AdicionarContatosPage)
+  },
 ];
