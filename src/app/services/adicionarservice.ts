@@ -10,19 +10,19 @@ export class Adicionarservice {
     nome :string ,sobrenome :string , email:string
   ){
     const contatos = new contato();
+    contatos.id_contato= 1+this.array_contatos.length;
     contatos.nome = nome;
     contatos.sobrenome = sobrenome;
     contatos.email = email;
 
 
-const obj = {
-  nome : contatos.nome,
-  sobrenome : contatos.sobrenome,
-  email : contatos.email
+this.array_contatos.push(contatos);
+if(this.array_contatos.length >= 0
+){
+  localStorage.setItem("contatos" ,JSON.stringify(this.array_contatos));
 }
-localStorage.setItem("contatos" ,JSON.stringify(obj));
 
-    this.array_contatos.push(contatos);
+    
 
   }
 }

@@ -5,32 +5,40 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="container">
-    <ion-list class="row">
+
+
+<ion-button (click)="atualizar()">Atualizar</ion-button>
+
+@if(array_cliente.length > 0){
+  <div *ngFor="let cliente of array_cliente ;let i = index">
+        <ion-list class="row">
           <ion-item class="col">
      <div class="item">
        <ion-label class="caixa">Ordem</ion-label>
-      <p slot="end">1°</p>
+      <p slot="end">{{i}}°</p>
      </div>
     </ion-item>
     <ion-item class="col">
      <div class="item">
        <ion-label class="caixa">Nome :</ion-label>
-      <p slot="end">Pedro</p>
+      <p slot="end">{{cliente.nome}}</p>
      </div>
     </ion-item>
         <ion-item class="col">
      <div class="item">
-       <ion-label class="caixa">Sobrenome</ion-label>
+       <ion-label class="caixa">{{cliente.sobrenome}}</ion-label>
       <p slot="end">Sousa</p>
      </div>
     </ion-item>
         <ion-item class="col">
      <div class="item">
        <ion-label class="caixa">Email</ion-label>
-      <p slot="end">Pedro@gmail.com</p>
+      <p slot="end">{{cliente.email}}</p>
      </div>
     </ion-item>
   </ion-list>
+  </div>
+}
   <ion-button routerLink="/home"
   expand="">Voltar</ion-button>
 </ion-content>
