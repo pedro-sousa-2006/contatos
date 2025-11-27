@@ -1,31 +1,24 @@
-.container {
-  padding: 16px;
+.direction{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.contato-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+form{
+  margin-top: 50px;
+  width: auto;
+  display: inline-block;
+  border: black 1px solid;
+  border-radius: 20px;
+  
 }
-
-.contato-item {
-  background: #fff;
-  border-radius: 10px;
-  --background: #ffffff;
+.button{
+  display: flex;
+  flex-direction: column;
+}
+.form{
   padding: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.contato-item ion-label {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.contato-item p {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 500;
 }
 .caixa{
-    font: size 40px;
+  margin: 20px;
 }
