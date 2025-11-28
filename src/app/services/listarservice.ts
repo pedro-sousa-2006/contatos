@@ -5,8 +5,12 @@ import { contato } from '../models/contato';
   providedIn: 'root',
 })
 export class Listarservice {
-  array_contato : Array<contato> = [];
-  listar():Array<contato>{
-    return this.array_contato;
+  listar() : Array<contato>{
+    const local = localStorage.getItem("contatos");
+    if(!local){
+      return [];
+    }
+    return JSON.parse(local) as Array<contato>;
+
   }
 }

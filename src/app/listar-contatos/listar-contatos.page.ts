@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonButto
 import { RouterModule } from '@angular/router';
 import { contato } from '../models/contato';
 import { Listarservice } from '../services/listarservice';
+import { Adicionarservice } from '../services/adicionarservice';
 @Component({
   selector: 'app-listar-contatos',
   templateUrl: './listar-contatos.page.html',
@@ -13,20 +14,13 @@ import { Listarservice } from '../services/listarservice';
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonItem, IonButton, IonRouterLink, IonLabel ,RouterModule ]
 })
 export class ListarContatosPage implements OnInit {
-  array_cliente : Array<contato> = []
-  constructor(
-    private listaservice : Listarservice
-  ) { }
-    atualizar(){
-     const dados =  this.listaservice.listar();
-     this.array_cliente = dados;
-    window.location.reload();
-  }
-  listar :Array<contato>  = [];
+  array_cliente: Array<contato> = [];
 
+  constructor(private listaservice: Listarservice) {}
 
   ngOnInit() {
-
+   this.array_cliente = this.listaservice.listar();
+    
   }
 
 }

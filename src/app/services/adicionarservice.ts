@@ -5,24 +5,37 @@ import { contato } from '../models/contato';
   providedIn: 'root',
 })
 export class Adicionarservice {
-  array_contatos : Array<contato> = [];
+
   adicionar(
+
     nome :string ,sobrenome :string , email:string
   ){
+   let array_contatos : Array<contato> = [];
+    const local = localStorage.getItem("contatos");
+
+     if(local){
+      array_contatos = JSON.parse(local);
+     }
     const contatos = new contato();
-    contatos.id_contato= 1+this.array_contatos.length;
+    contatos.id_contato=1 + array_contatos.length;
     contatos.nome = nome;
     contatos.sobrenome = sobrenome;
     contatos.email = email;
 
+  array_contatos.push(contatos);
 
-this.array_contatos.push(contatos);
-if(this.array_contatos.length >= 0
-){
-  localStorage.setItem("contatos" ,JSON.stringify(this.array_contatos));
-}
+
+
+
+
+
+
+  localStorage.setItem("contatos"
+     ,JSON.stringify(array_contatos));
 
     
 
   }
+  
+  
 }
