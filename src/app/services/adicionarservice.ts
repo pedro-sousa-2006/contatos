@@ -1,12 +1,17 @@
 import { Injectable } from '@angular/core';
 import { contato } from '../models/contato';
+import { initializeApp } from "firebase/app";
+import {  addDoc } from "firebase/firestore"; 
+import { collection, Firestore, getFirestore } from "firebase/firestore";
 
 @Injectable({
   providedIn: 'root',
 })
 export class Adicionarservice {
 
-  adicionar(
+  constructor(private firestore : Firestore){}
+
+async  adicionar(
 
     nome :string ,sobrenome :string , email:string
   ){
@@ -33,7 +38,8 @@ export class Adicionarservice {
   localStorage.setItem("contatos"
      ,JSON.stringify(array_contatos));
 
-    
+
+
 
   }
   

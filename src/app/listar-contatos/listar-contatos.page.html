@@ -31,6 +31,18 @@
         <p slot="end">{{ cliente.email }}</p>
       </ion-item>
 
+      <ion-item>
+        <ion-button
+         (click)="alterar(i)">
+        Alterar</ion-button>
+      </ion-item>
+            <ion-item>
+        <ion-button
+         (click)="deletar(i)"
+         color="danger">
+        <Data>eletar</Data></ion-button>
+      </ion-item>
+
     </ion-list>
   </div>
 

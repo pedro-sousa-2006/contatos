@@ -6,6 +6,9 @@ import { RouterModule } from '@angular/router';
 import { contato } from '../models/contato';
 import { Listarservice } from '../services/listarservice';
 import { Adicionarservice } from '../services/adicionarservice';
+import { find } from 'rxjs';
+import { Alterar } from '../services/alterar';
+import { Deletar } from '../services/deletar';
 @Component({
   selector: 'app-listar-contatos',
   templateUrl: './listar-contatos.page.html',
@@ -16,11 +19,19 @@ import { Adicionarservice } from '../services/adicionarservice';
 export class ListarContatosPage implements OnInit {
   array_cliente: Array<contato> = [];
 
-  constructor(private listaservice: Listarservice) {}
+  constructor(private listaservice: Listarservice ,
+    private servicealterar : Alterar , private servicedeletar : Deletar
+  ) {}
 
   ngOnInit() {
    this.array_cliente = this.listaservice.listar();
     
+  }
+  alterar(item :number){
+
+  }
+  deletar(item :number){
+        
   }
 
 }
